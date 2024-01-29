@@ -4,7 +4,7 @@ import openai
 import os
 
 # API Anahtarını Ortam Değişkeninden Al
-openai.api_key = os.getenv("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")
+openai.api_key = os.getenv("")
 
 
 def extract_audio(input_video_path, output_audio_path, bitrate="32k"):
