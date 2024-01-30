@@ -52,9 +52,8 @@ class Video():
 class YoutubeUrl:
     def __init__(self,url):
         self.raw_url= url
-        #self.down_yt_path = self.download_youtube_video(url)
+        self.down_yt_path = self.download_youtube_video(url)
         #print(self.down_yt_path)
-        self.down_yt_path = './566f5223-dc1c-4197-9480-fffdf46f3ae7.mp4'
         self.raw_video_clip = VideoFileClip(self.down_yt_path)
         self.raw_audio = self.raw_video_clip.audio
         #self.raw_video_clip.close()
