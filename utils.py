@@ -1,6 +1,7 @@
 import re
 from datetime import datetime
 from urllib.parse import urlparse, parse_qs
+import os
 
 def parse_youtube_url(url):
     # URL'yi parçala
@@ -37,3 +38,11 @@ def input_type_control(path):
         else:
             print("Geçersiz Url.")
             return None
+        
+def create_folder_if_not_exist(folder_path):
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+        
+def load_text(file_path):
+    with open(file_path, 'r') as file:
+        return file.read()

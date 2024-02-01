@@ -84,7 +84,7 @@ class YoutubeUrl:
 
 # örnek  
 #data_list = ['https://www.youtube.com/watch?v=7U7SGYPcdiM'] #youtube test
-data_list = ['./cb_uzun.mp3']
+data_list = ["/home/dell/Desktop/aa/aa-proje/raw/aaexam.mp4"]
 #data_list = ['./raw/aaexam.mp4']
 
 ### 0 audio file  / 1 video file / 2 url
@@ -93,11 +93,11 @@ for i in data_list:
     type = input_type_control(i)
     if type == 0:
         audio_obj = Audio(i)
-        croped_audio = audio_obj.get_segment_audio(10,12)
+        croped_audio = audio_obj.get_segment_audio(1,2)
         audio_obj.download_segment_audio(croped_audio)
     elif type  == 1:
         video_obj = Video(i)
-        croped_video_audio = video_obj.get_segment_video(1,2)
+        croped_video_audio = video_obj.get_segment_video(0,15)
         video_obj.download_segment_video(croped_video_audio)
     elif type  == 2:
         url_obj = YoutubeUrl(i)
