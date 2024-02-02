@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-<img src="src/HANGİ DAKİKA (1).png" width="800px">
+<img src="src/HANGİ DAKİKA (1).png" width="500px">
 </div>
 <br>
 

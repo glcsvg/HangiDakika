@@ -254,6 +254,7 @@ def download_youtube_video(url):
         yt = YouTube(url)
         yt.streams.filter(file_extension="mp4").first().download(filename=filename)
         return filename 
+
 @app.post("/crop-media/")
 async def crop_media(item: InputType):
     item_type = input_type_control(item.path)
