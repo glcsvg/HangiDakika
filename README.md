@@ -24,10 +24,13 @@
 
 * npm install -g @angular/cli
 
-* npm install 
+* ```python
+  npm install 
+    ```
+  
 
     ```python
-            git clone https://github.com/KullanıcıAdı/proje.git
+    git clone [https://github.com/KullanıcıAdı/proje.git](https://github.com/Muhammedali26/HangiDakika.git)
 
     ```
 
