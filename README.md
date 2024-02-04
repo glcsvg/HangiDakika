@@ -22,7 +22,9 @@
   
 * Angular ve Node.js kurummları gereklidir
 
-* npm install -g @angular/cli
+* ```
+    npm install -g @angular/cli
+    ```
 
 * ```python
   npm install 
