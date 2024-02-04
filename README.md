@@ -13,7 +13,7 @@
 # Kurulum
 * ## Sistem Gereksinimleri
 
-* ## Gerekli kütüphanelerin Kurulması
+* ## Gerekli kütüphanelerin Kurulumu
     ```
     pip install -r requirements.txt
     ```
