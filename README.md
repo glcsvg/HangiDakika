@@ -10,17 +10,17 @@
 
 #medyahackathonu2024
 
+
 # Kurulum
 * ## Sistem Gereksinimleri
 
 * ## Gerekli kütüphanelerin Kurulumu
     ```
     pip install -r requirements.txt
-    ffmpeg için rehber: https://phoenixnap.com/kb/ffmpeg-windows
     ```
-* OpenAI API KEY alma
+* OpenAI API KEY almak gereklidir
 
-* xxxxxx
+* npm install 
 
     ```python
             git clone https://github.com/KullanıcıAdı/proje.git
@@ -29,12 +29,6 @@
 
 # Kullanım
 * Ses(mp3,wav) ,video(mp4,) desteklemektedir
-
-
-## video ,gif vs
-
-
-
 
 
 
