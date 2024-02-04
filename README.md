@@ -16,6 +16,7 @@
 * ## Gerekli kütüphanelerin Kurulumu
     ```
     pip install -r requirements.txt
+    ffmpeg için rehber: https://phoenixnap.com/kb/ffmpeg-windows
     ```
 * OpenAI API KEY alma
 
