@@ -1,0 +1,6 @@
+nltk
+zeyrek
+fuzzywuzzy
+openai==0.28.0
+openai
+zeyrek
