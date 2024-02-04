@@ -1,0 +1,394 @@
+<!-- Layout wrapper -->
+<div class="layout-wrapper layout-content-navbar">
+  <div class="layout-container">
+    <!-- Menu -->
+
+    <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+      <div class="app-brand demo">
+        <a href="index.html" class="app-brand-link">
+          <span class="app-brand-logo demo">
+            <img src="../assets/kaktus.png" width="46px" alt="">
+          </span>
+          <span class="app-brand-text menu-text fw-bold ms-2" style="font-size: large;">Kaçıncı Dakika</span>
+        </a>
+
+        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+          <i class="bx bx-chevron-left bx-sm align-middle"></i>
+        </a>
+      </div>
+
+      <div class="menu-inner-shadow"></div>
+
+      <ul class="menu-inner py-1">
+        <!-- Dashboards -->
+        <li class="menu-item active open">
+          <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <i class="menu-icon tf-icons bx bx-analyse"></i>
+            <div data-i18n="Dashboards">Analiz</div>
+          </a>
+          <ul class="menu-sub">
+            <li class="menu-item active">
+              <a href="#" class="menu-link">
+                <div data-i18n="CRM">Dosyadan Tarama</div>
+              </a>
+            </li>
+            <!-- <li class="menu-item ">
+              <a href="#" class="menu-link">
+                <div data-i18n="Analytics">Çoklu Dilde Çeviri</div>
+              </a>
+            </li>
+            <li class="menu-item ">
+              <a href="#" class="menu-link">
+                <div data-i18n="Analytics">Kelime Bazlı Analiz</div>
+              </a>
+            </li>
+            <li class="menu-item ">
+              <a href="#" class="menu-link">
+                <div data-i18n="Analytics">Alt Başlık Analizi</div>
+              </a>
+            </li> -->
+          </ul>
+        </li>
+      </ul>
+    </aside>
+    <!-- / Menu -->
+
+    <!-- Layout container -->
+    <div class="layout-page">
+      <!-- Navbar -->
+      <nav
+        class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+        id="layout-navbar">
+        <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+          <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+            <i class="bx bx-menu bx-sm"></i>
+          </a>
+        </div>
+
+        <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+          <ul class="navbar-nav flex-row align-items-center ms-auto">
+            <!-- User -->
+            <li class="nav-item navbar-dropdown dropdown-user dropdown">
+              <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                <div class="avatar avatar-online">
+                  <img src="../assets/kaktus.png" alt class="w-px-40 h-auto rounded-circle" />
+                </div>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="d-flex">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="avatar avatar-online">
+                          <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <span class="fw-medium d-block">Kaktüs</span>
+                        <small class="text-muted">Admin</small>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <div class="dropdown-divider"></div>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="javascript:void(0);">
+                    <i class="bx bx-power-off me-2"></i>
+                    <span class="align-middle">Çıkış</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!--/ User -->
+          </ul>
+        </div>
+      </nav>
+
+      <!-- / Navbar -->
+
+      <!-- Content wrapper -->
+      <div class="content-wrapper">
+        <!-- Content -->
+
+        <div class="container-xxl flex-grow-1 container-p-y">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card mb-4">
+                <h5 class="card-header">Dosyadan Tarama</h5>
+                <div class="card-body demo-vertical-spacing demo-only-element">
+                  <small class="text-light fw-medium d-block pt-3">Dosya Yükle</small>
+                  <div class="input-group">
+                    <!-- <span class="input-group-text" id="basic-addon14">https://example.com/kaktus/</span> -->
+                    <!-- <input type="text" class="form-control" placeholder="URL" id="basic-url1" [(ngModel)]="customUrl"
+                      aria-describedby="basic-addon14" /> -->
+                    <input class="form-control" type="file" id="formFile" (change)="onSelectFile($event)" />
+                    <button type="button" class="btn btn-dark" (click)="playVideo()">
+                      <i *ngIf="!isPlay" class='bx bx-play text text-white'></i>
+                      <i *ngIf="isPlay" class='bx bx-pause text text-white'></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card mb-4">
+                <h5 class="card-header">Anahtar Kelime Tarama</h5>
+                <div class="card-body demo-vertical-spacing demo-only-element">
+                  <small class="text-light fw-medium d-block pt-3">Anahtar kelime</small>
+                  <div class="input-group input-group-merge speech-to-text">
+
+                    <textarea class="form-control" [disabled]="!url" [(ngModel)]="keyword"
+                      placeholder="Anahtar kelime giriniz.." rows="2"></textarea>
+                    <span class="input-group-text">
+                      <i class="bx bx-microphone cursor-pointer text-to-speech-toggle"></i>
+                    </span>
+                    <button type="button" class="btn btn-dark" (click)="runApi()">Analize Başla</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <video id="myVideo" [src]="url" *ngIf="format==='video' && url" width="100%" height="267px"
+                controls></video> <br />
+              <!-- <div *ngIf="url" class="card">
+                <h5 class="card-header">Künye</h5>
+                <div class="card-body">
+                  <h6><b>Ne:</b> Medya Teknolojileri Hackatonu</h6>
+                  <h6><b>Nerede:</b> Anadolu Ajansı</h6>
+                  <h6><b>Ne Zaman:</b> 2, 3, 4 Şubat</h6>
+                  <h6><b>Niçin:</b> </h6>
+                  <h6><b>Kim:</b> </h6>
+                </div>
+              </div> -->
+            </div>
+            <div class="col-md-6">
+              <!-- Hoverable Table rows -->
+              <div class="card">
+                <h5 class="card-header">Çıktılar</h5>
+                <!-- <div class="nav-align-top mb-4"> -->
+                <ul class="nav nav-tabs nav-fill" role="tablist">
+                  <li class="nav-item">
+                    <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
+                      data-bs-target="#navs-justified-home" aria-controls="navs-justified-home" aria-selected="true">
+                      <i class="tf-icons bx bx-key"></i> Anahtar Kelime Arama
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                      data-bs-target="#navs-justified-profile" aria-controls="navs-justified-profile"
+                      aria-selected="false">
+                      <i class="tf-icons bx bx-flag"></i> Çoklu Dilde Çeviri
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                      data-bs-target="#navs-justified-messages" aria-controls="navs-justified-messages"
+                      aria-selected="false">
+                      <i class="tf-icons bx bx-support"></i> Konu Başlığı Analizi
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="navs-justified-home" role="tabpanel">
+                    <div class="table-responsive text-nowrap">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>Anahtar Kelime</th>
+                            <th>Başlangıç Zamanı</th>
+                            <th>Eşleşme Oranı</th>
+                            <th>İşlemler</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-border-bottom-0">
+                          <tr *ngFor="let item of _keywordAnalysis">
+                            <td><a (click)="skip2(item)"><strong>{{item.kelime}}</strong></a></td>
+                            <td>{{item.start}} saniye</td>
+                            <td><span class="badge bg-label-primary me-1">{{item.eslesme_orani}}</span></td>
+                            <td><span class="btn btn-dark" (click)="detailShow(item)">Detay</span></td>
+                            <td>
+                              <!-- <div class="dropdown">
+                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                  data-bs-toggle="dropdown">
+                                  <i class="bx bx-dots-vertical-rounded"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="javascript:void(0);" (click)="cut($event)"><i
+                                      class="bx bx-edit-alt me-1"></i>
+                                    Kırp</a>
+                                  <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
+                                      Sil</a>
+                                </div>
+                              </div> -->
+                            </td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="navs-justified-profile" role="tabpanel">
+                    <div class="col-md-4 mb-3">
+                      <label for="exampleFormControlSelect1" class="form-label">Dil Çeviri</label>
+                      <select class="form-select" id="exampleFormControlSelect1" [disabled]="!url"
+                        (change)="onChange($event)" aria-label="Default select example">
+                        <option selected>Lütfen seçim yapın..</option>
+                        <option value="english">İngilizce</option>
+                        <option value="italian">İtalyanca</option>
+                        <option value="spanish">İspanyolca</option>
+                        <option value="german">Almanca</option>
+                        <option value="french">Fransızca</option>
+                        <option value="russian">Rusça</option>
+                      </select>
+                    </div>
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Başlangıç Zamanı</th>
+                          <th>Bitiş Zamanı</th>
+                          <th>Çeviri</th>
+                          <!-- <th>İşlemler</th> -->
+                        </tr>
+                      </thead>
+                      <tbody class="table-border-bottom-0">
+                        <tr *ngFor="let item of _translateLoop">
+                          <td>{{item.start}}</td>
+                          <td>{{item.end}}</td>
+                          <td>{{item.text}}</td>
+                          <!-- <td>
+                                <div class="dropdown">
+                                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                    data-bs-toggle="dropdown">
+                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                  </button>
+                                  <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="javascript:void(0);"><i
+                                        class="bx bx-edit-alt me-1"></i>
+                                      Kırp</a>
+                                  </div>
+                                </div>
+                              </td> -->
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tab-pane fade" id="navs-justified-messages" role="tabpanel">
+                    <div class="table-responsive  overflow-x:auto;">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>Konu Başlıkları</th>
+                            <th>Başlangıç Zamanı</th>
+                            <th>Bitiş Zamanı</th>
+                            <th>Anahtar Kelimeler</th>
+                            <th>İşlemler</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-border-bottom-0">
+                          <tr *ngFor="let item of _subTopics">
+                            <td><a (click)="skip(item)"><strong>{{item[0]}}</strong></a></td>
+                            <td>{{item[1]}}</td>
+                            <td>{{item[2]}}</td>
+                            <td>{{item[3]}}</td>
+                            <td>
+                              <div class="dropdown">
+                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                  data-bs-toggle="dropdown">
+                                  <i class="bx bx-dots-vertical-rounded"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" (click)="cut(item)"><i class="bx bx-edit-alt me-1"></i>
+                                    Kırp</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- </div> -->
+
+              </div>
+
+              <!--/ Hoverable Table rows -->
+
+
+
+              <!-- <div class="mb-4 mb-xl-0">
+                <small class="text-light fw-medium">Sonuçlar</small>
+                <div class="demo-inline-spacing mt-3">
+                  <div class="list-group list-group-flush">
+                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">uçan kuşlar -
+                      start-0:12-duration:0:16 </a>
+                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">uçan kuşlar -
+                      start-0:25-duration:0:30 </a>
+                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">uçan kuşlar -
+                      start-0:35-duration:0:38 </a>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+            <!-- <div class="col-md-1">
+              <div class="mb-4 mb-xl-0">
+                <small class="text-light fw-medium"></small>
+                <div class="demo-inline-spacing mt-3 row">
+                  <span class="btn btn-dark">Kırp</span>
+                  <span class="btn btn-dark">Kırp</span>
+                  <span class="btn btn-dark">Kırp</span>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <!-- / Content -->
+
+        <!-- Footer -->
+        <footer class="content-footer footer bg-footer-theme">
+          <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+            <div class="mb-2 mb-md-0">
+              © KAKTÜS
+            </div>
+          </div>
+        </footer>
+        <!-- / Footer -->
+
+        <div class="content-backdrop fade"></div>
+      </div>
+      <!-- Content wrapper -->
+    </div>
+    <!-- / Layout page -->
+  </div>
+
+  <!-- Overlay -->
+  <div class="layout-overlay layout-menu-toggle"></div>
+</div>
+<!-- / Layout wrapper -->
+
+
+
+
+<!-- 
+<div id="instructions">
+	<video id="my_video_1" class="video-js vjs-default-skin" width="640px" height="267px" controls preload="none"
+		poster='http://video-js.zencoder.com/oceans-clip.jpg'
+		data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
+		<source src="https://vjs.zencdn.net/v/oceans.mp4" type='video/mp4' />
+		<source src="https://vjs.zencdn.net/v/oceans.webm" type='video/webm' />
+	</video>
+	<button (click)="playPause()">Play/Pause</button>
+	<button (click)="makeBig()">Big</button>
+	<button (click)="makeSmall()">Small</button>
+	<button (click)="makeNormal()">Normal</button>
+	<button (click)="restart();">Restart</button>
+	<button (click)="skip(-10)">Rewind</button>
+	<button (click)="skip(10)">Fastforward</button>
+</div> -->
