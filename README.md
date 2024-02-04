@@ -18,7 +18,11 @@
     ```
     pip install -r requirements.txt
     ```
-* OpenAI API KEY almak gereklidir
+* [OpenAI] API KEY (https://openai.com/) almak gereklidir
+  
+* Angular ve Node.js kurummları gereklidir
+
+* npm install -g @angular/cli
 
 * npm install 
 
