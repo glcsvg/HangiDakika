@@ -9,10 +9,10 @@
 
 
 #medyahackathonu2024
-Halit Efe Tanrıkulu - NLP Engineer
-Sevgi Güleşçi - NLP Engineer
-Burak Hüseyin Yanık - Full-Stack Developer
-Muhammed Ali Şahan - Backend Developer
+* Halit Efe Tanrıkulu - NLP Engineer
+* Sevgi Güleşçi - NLP Engineer
+* Burak Hüseyin Yanık - Full-Stack Developer
+* Muhammed Ali Şahan - Backend Developer
 
 
 # Kurulum
