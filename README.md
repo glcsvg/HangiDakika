@@ -1,18 +1,15 @@
 <div align="center">
-<img src="https://media.discordapp.net/attachments/1179411074043355207/1193962121092935710/mt_hackathon.png?ex=65ca4e60&is=65b7d960&hm=b6895c0348a423d054b38a200f5105862132c5d36c0328faae452dcb7f832355&=&format=webp&quality=lossless&width=1440&height=482" width="1000px">
+<img src="src/mt_hackathon.png" width="1000px">
 </div>
 
 <div align="center">
-<img src="src/logo2.png" width="500px">
+<img src="src/img2.png" width="500px">
 </div>
 <br>
 
 
 #medyahackathonu2024
-* Halit Efe Tanrıkulu - NLP Engineer
-* Sevgi Güleşçi - NLP Engineer
-* Burak Hüseyin Yanık - Full-Stack Developer
-* Muhammed Ali Şahan - Backend Developer
+
 
 
 # Kurulum
@@ -42,6 +39,14 @@
 
 # Kullanım
 * Ses(mp3,wav) ,video(mp4,) desteklemektedir
+
+# Katkıda Bulunanlar
+
+- [@glcsvg](https://github.com/glcsvg)
+- [@Muhammedali26](https://github.com/Muhammedali26) 
+- [@ynkbrk ](https://github.com/ynkbrk ) 
+- [@halittefe ](https://github.com/halittefe )
+
 
 
 
