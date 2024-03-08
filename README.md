@@ -13,32 +13,29 @@
 
 
 # Kurulum
-* ## Sistem Gereksinimleri
+## Sistem Gereksinimleri
 
-* ## Gerekli kütüphanelerin Kurulumu
-    ```
-    pip install -r requirements.txt
-    ```
-* [OpenAI] API KEY (https://openai.com/) almak gereklidir
+## Gerekli kütüphanelerin Kurulumu
+
+```
+pip install -r requirements.txt
+```
+* OpenAI API KEY (https://openai.com/) almak gereklidir
   
 * Angular ve Node.js kurummları gereklidir
 
-* ```
-    npm install -g @angular/cli
-    ```
+```
+npm install -g @angular/cli
+```
 
-* ```python
-  npm install 
-    ```
+```
+npm install 
+```
   
 
-    ```python
-    git clone [https://github.com/KullanıcıAdı/proje.git](https://github.com/Muhammedali26/HangiDakika.git)
-
-    ```
 
 # Kullanım
-* Ses(mp3,wav) ,video(mp4,) desteklemektedir
+Ses(mp3,wav) ,video(mp4,) desteklemektedir
 
 # Katkıda Bulunanlar
 
