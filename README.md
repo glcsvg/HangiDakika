@@ -8,8 +8,6 @@
 <br>
 
 
-#medyahackathonu2024
-
 
 
 # Kurulum
